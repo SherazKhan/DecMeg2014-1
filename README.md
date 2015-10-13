@@ -16,3 +16,5 @@ Run xxx. to create a submission.
 What does the code do?
 
 Stacked genralisation is a method of ensembling where predictions from multiple predictors are ensembled using another predictor.
+
+Each subject, Si, i=0-15 is trained on data <xi,yi>, and xi = {xi,o...xi,mi} resulting in a model mi.
