@@ -91,10 +91,9 @@ for loocv_id in range(1,n_subjects+1):
     #Extract subject train data. This is the entire train set SANS the left out subject...
     x_train = train_data['train_data'][np.where(train_data['subject_id']!=loocv_subject)]
     y_train = train_data['label'][np.where(train_data['subject_id']!=loocv_subject)]
-    weight  =cov_shift[np.where(train_data['subject_id']!=loocv_subject)]
     
 	#...and write it in VW format
-	train_l0_data_vw = 'c:/Users/kpasad/data/ML/projects/MEGBrainActivity/traindata/vw_data_fd_full_loocv/train_vw_cs_'+str(loocv_subject)+'.vw'        
+	train_l0_data_vw = 'c:/Users/kpasad/data/ML/projects/MEGBrainActivity/traindata/vw_data_fd_full_loocv/train_vw_sans_'+str(loocv_subject)+'.vw'        
     write_vw(x_train,y_train,'train',open(train_l0_data_vw,'w'))
     n_train = len(x_train)
 
