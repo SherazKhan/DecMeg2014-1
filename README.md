@@ -5,7 +5,7 @@ https://www.kaggle.com/c/decoding-the-human-brain
 
 The code provided here is a straight forward application of stacked generalisation ensembling as mentioned in the project. The code is organised as follows:
 
-1. Run the matlab script fd_features_func.m. This scripts will generate the train.mat and test.mat, which are preprocessed matlab files. Preprocessing includes (not all options are enabled, some may be commented off): 
+1. Run the matlab script fd_features_func.m. This scripts will generate the train.mat and test.mat, which are preprocessed matlab files. These steps were needed to reduce the size of the data set to work with a 2MB RAM. If you have bigger memory, preprocessing for size reduction  is not neccesary (but recommended for robust feature generation). Preprocessing includes (not all options are enabled, some may be commented off): 
     - Notch filtering to remove 60Hz powerline interference
     - Low pass filtering
     - Windowing
